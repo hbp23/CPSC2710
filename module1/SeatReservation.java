@@ -6,6 +6,14 @@ public class SeatReservation {
     private String firstName;
     private String lastName;
 
+    // constructor
+    public SeatReservation() {
+        flightDesignator = null;
+        flightDate = null;
+        firstName = null;
+        lastName = null;
+    }
+
     // methods
     public String getFlightDesignator() {
         return flightDesignator;
@@ -37,6 +45,12 @@ public class SeatReservation {
 
     public void setLastName(String ln) {
         lastName = ln;
+    }
+
+    public String toString() {
+        String output = "SeatReservation{flightDesignator=" + flightDesignator + ",flightDate=" + flightDate
+                + ",firstName=" + firstName + ",lastName=" + lastName + "}";
+        return output;
     }
 
 }
