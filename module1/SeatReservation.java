@@ -31,7 +31,7 @@ public class SeatReservation {
         flightDate = date;
     }
 
-    public getFirstName() {
+    public String getFirstName() {
         return firstName;
     }
 
