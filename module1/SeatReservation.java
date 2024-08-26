@@ -1,6 +1,42 @@
 public class SeatReservation {
+
+    // fields
     private String flightDesignator;
     private java.time.LocalDate flightDate;
     private String firstName;
     private String lastName;
+
+    // methods
+    public String getFlightDesignator() {
+        return flightDesignator;
+    }
+
+    public void setFlightDesignator(String fd) {
+        flightDesignator = fd;
+    }
+
+    public java.time.LocalDate getFlightDate() {
+        return flightDate;
+    }
+
+    public void setFlightDate(java.time.LocalDate date) {
+        flightDate = date;
+    }
+
+    public getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String fn) {
+        firstName = fn;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String ln) {
+        lastName = ln;
+    }
+
 }
