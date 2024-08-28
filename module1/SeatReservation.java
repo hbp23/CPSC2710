@@ -20,8 +20,7 @@ public class SeatReservation {
     }
 
     public void setFlightDesignator(String fd) {
-        // flightDesignator = fd;
-        
+        flightDesignator = fd;
     }
 
     public java.time.LocalDate getFlightDate() {
