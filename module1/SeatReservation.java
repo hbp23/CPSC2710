@@ -20,7 +20,10 @@ public class SeatReservation {
     }
 
     public void setFlightDesignator(String fd) {
-        int l = fd.length();
+        if (fd == null) {
+            throw new IllegalArgumentException("Flight Designator cannot be null");
+        }
+        int l = flightDesignator.length();
         if (l < 4 || l > 6) {
             throw new IllegalArgumentException("Invalid Flight Designator character length");
         }
