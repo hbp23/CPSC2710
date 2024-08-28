@@ -23,7 +23,7 @@ public class SeatReservation {
         if (fd == null) {
             throw new IllegalArgumentException("Flight Designator cannot be null");
         }
-        int l = flightDesignator.length();
+        int l = fd.length();
         if (l < 4 || l > 6) {
             throw new IllegalArgumentException("Invalid Flight Designator character length");
         }
