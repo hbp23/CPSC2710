@@ -1,3 +1,5 @@
+package edu.au.cpsc.module2;
+
 public class SeatReservation {
 
     // fields
@@ -5,6 +7,8 @@ public class SeatReservation {
     private java.time.LocalDate flightDate;
     private String firstName;
     private String lastName;
+    private int numberOfBags;
+    private boolean flyingWithInfant;
 
     // constructor
     public SeatReservation() {
@@ -12,6 +16,8 @@ public class SeatReservation {
         flightDate = null;
         firstName = null;
         lastName = null;
+        numberOfBags = 0;
+        flyingWithInfant = false;
     }
 
     // methods
@@ -54,9 +60,20 @@ public class SeatReservation {
         lastName = ln;
     }
 
+    public int getNumberOfBags() { return numberOfBags; }
+
+    public void setNumberOfBags(int nb) { numberOfBags = nb; }
+
+    public boolean isFlyingWithInfant() { return flyingWithInfant; }
+
+    public void makeFlyingWithInfant() { flyingWithInfant = true; }
+
+    public void makeNotFlyingWithInfant() { flyingWithInfant = false; }
+
     public String toString() {
         String output = "SeatReservation{flightDesignator=" + flightDesignator + ",flightDate=" + flightDate
-                + ",firstName=" + firstName + ",lastName=" + lastName + "}";
+                + ",firstName=" + firstName + ",lastName=" + lastName + ",numberOfBags=" + numberOfBags
+                + ",flyingWithInfant=" + flyingWithInfant + "}";
         return output;
     }
 
