@@ -10,7 +10,7 @@ public class SeatReservation {
     private int numberOfBags;
     private boolean flyingWithInfant;
 
-    // constructor
+    // constructors
     public SeatReservation() {
         flightDesignator = null;
         flightDate = null;
@@ -18,6 +18,21 @@ public class SeatReservation {
         lastName = null;
         numberOfBags = 0;
         flyingWithInfant = false;
+    }
+
+    public SeatReservation(String flightDesignator, java.time.LocalDate flightDate, String firstName,
+                           String lastName, int numberOfBags, boolean flyingWithInfant) {
+        setFlightDesignator(flightDesignator);
+        setFlightDate(flightDate);
+        setFirstName(firstName);
+        setLastName(lastName);
+        setNumberOfBags(numberOfBags);
+        if (flyingWithInfant) {
+            makeFlyingWithInfant();
+        }
+        else {
+            makeNotFlyingWithInfant();
+        }
     }
 
     // methods
