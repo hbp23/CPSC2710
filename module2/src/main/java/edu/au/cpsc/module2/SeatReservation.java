@@ -56,6 +56,9 @@ public class SeatReservation {
     }
 
     public void setFlightDate(java.time.LocalDate date) {
+        if (date == null) {
+            throw new IllegalArgumentException("Flight Date cannot be null");
+        }
         flightDate = date;
     }
 
@@ -64,6 +67,9 @@ public class SeatReservation {
     }
 
     public void setFirstName(String fn) {
+        if (fn == null) {
+            throw new IllegalArgumentException("First Name cannot be null");
+        }
         firstName = fn;
     }
 
@@ -72,6 +78,9 @@ public class SeatReservation {
     }
 
     public void setLastName(String ln) {
+        if (ln == null) {
+            throw new IllegalArgumentException("Last Name cannot be null");
+        }
         lastName = ln;
     }
 

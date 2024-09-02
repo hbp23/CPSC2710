@@ -1,6 +1,7 @@
 module edu.au.cpsc.module2 {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
 
     opens edu.au.cpsc.module2 to javafx.fxml;
