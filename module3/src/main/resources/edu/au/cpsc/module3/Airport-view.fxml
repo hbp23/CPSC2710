@@ -1,16 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="edu.au.cpsc.module3.AirportController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.au.cpsc.module3.AirportController">
+   <bottom>
+      <HBox fx:id="searchTools" prefHeight="13.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField alignment="CENTER" promptText="identity code" />
+            <TextField alignment="CENTER" promptText="iata code" />
+            <TextField alignment="CENTER" promptText="local code" />
+            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="158.0" text="Search">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <WebView prefHeight="374.0" prefWidth="461.0" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <VBox fx:id="airportInfo" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" prefHeight="374.0" prefWidth="175.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Airport Info" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <Label text="Name" />
+            <TextField fx:id="nameTextField" alignment="CENTER" editable="false" />
+            <Label text="Type" />
+            <TextField fx:id="typeTextField" alignment="CENTER" editable="false" />
+            <Label text="Elevation" />
+            <TextField fx:id="elevationTextField" alignment="CENTER" editable="false" />
+            <Label text="Country" />
+            <TextField fx:id="countryTextField" alignment="CENTER" editable="false" />
+            <Label text="Region" />
+            <TextField fx:id="regionTextField" alignment="CENTER" editable="false" />
+            <Label text="Municipality" />
+            <TextField fx:id="municipalityTextField" alignment="CENTER" editable="false" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+</BorderPane>
