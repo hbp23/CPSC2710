@@ -11,14 +11,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.au.cpsc.module3.AirportController">
    <bottom>
       <HBox fx:id="searchTools" prefHeight="13.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField alignment="CENTER" promptText="identity code" />
-            <TextField alignment="CENTER" promptText="iata code" />
-            <TextField alignment="CENTER" promptText="local code" />
+            <TextField fx:id="identityTextField" alignment="CENTER" onAction="#identityTextFieldAction" promptText="identity code" />
+            <TextField fx:id="iataTextField" alignment="CENTER" onAction="#iataTextFieldAction" promptText="iata code" />
+            <TextField fx:id="localTextField" alignment="CENTER" onAction="#localTextFieldAction" promptText="local code" />
             <Button alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="158.0" text="Search">
                <HBox.margin>
                   <Insets />

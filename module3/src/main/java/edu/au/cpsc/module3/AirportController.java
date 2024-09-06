@@ -11,6 +11,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.web.WebView;
 
+import javax.swing.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -20,6 +21,163 @@ public class AirportController implements Initializable {
     private HBox searchTools;
 
     @FXML
+    private TextField identityTextField;
+
+    @FXML
+    protected void identityTextFieldAction() {
+        iataTextField.clear();
+        localTextField.clear();
+        nameTextField.clear();
+        typeTextField.clear();
+        elevationTextField.clear();
+        countryTextField.clear();
+        regionTextField.clear();
+        municipalityTextField.clear();
+        String ident = identityTextField.getText();
+        Airport a = AirportApplication.findAirportIdentity(ident);
+        if (a != null) {
+            if (a.getIataCode() != null) {
+                iataTextField.setText(a.getIataCode());
+            }
+            if (a.getLocalCode() != null) {
+                localTextField.setText(a.getLocalCode());
+            }
+            if (a.getAirportName() != null) {
+                nameTextField.setText(a.getAirportName());
+            }
+            if (a.getAirportType() != null) {
+                typeTextField.setText(a.getAirportType());
+            }
+            if (a.getElevationInFeet() != null) {
+                elevationTextField.setText(Integer.toString(a.getElevationInFeet()));
+            }
+            if (a.getIsoCountry() != null) {
+                countryTextField.setText(a.getIsoCountry());
+            }
+            if (a.getIsoRegion() != null) {
+                regionTextField.setText(a.getIsoRegion());
+            }
+            if (a.getMunicipality() != null) {
+                municipalityTextField.setText(a.getMunicipality());
+            }
+        } else {
+            iataTextField.clear();
+            localTextField.clear();
+            nameTextField.clear();
+            typeTextField.clear();
+            elevationTextField.clear();
+            countryTextField.clear();
+            regionTextField.clear();
+            municipalityTextField.clear();
+        }
+    }
+
+    @FXML
+    private TextField iataTextField;
+
+    @FXML
+    protected void iataTextFieldAction() {
+        identityTextField.clear();
+        localTextField.clear();
+        nameTextField.clear();
+        typeTextField.clear();
+        elevationTextField.clear();
+        countryTextField.clear();
+        regionTextField.clear();
+        municipalityTextField.clear();
+        String iata = iataTextField.getText();
+        Airport a = AirportApplication.findAirportIata(iata);
+        if (a != null) {
+            if (a.getAirportIdentity() != null) {
+                identityTextField.setText(a.getAirportIdentity());
+            }
+            if (a.getLocalCode() != null) {
+                localTextField.setText(a.getLocalCode());
+            }
+            if (a.getAirportName() != null) {
+                nameTextField.setText(a.getAirportName());
+            }
+            if (a.getAirportType() != null) {
+                typeTextField.setText(a.getAirportType());
+            }
+            if (a.getElevationInFeet() != null) {
+                elevationTextField.setText(Integer.toString(a.getElevationInFeet()));
+            }
+            if (a.getIsoCountry() != null) {
+                countryTextField.setText(a.getIsoCountry());
+            }
+            if (a.getIsoRegion() != null) {
+                regionTextField.setText(a.getIsoRegion());
+            }
+            if (a.getMunicipality() != null) {
+                municipalityTextField.setText(a.getMunicipality());
+            }
+        } else {
+            identityTextField.clear();
+            localTextField.clear();
+            nameTextField.clear();
+            typeTextField.clear();
+            elevationTextField.clear();
+            countryTextField.clear();
+            regionTextField.clear();
+            municipalityTextField.clear();
+        }
+    }
+
+    @FXML
+    private TextField localTextField;
+
+    @FXML
+    protected void localTextFieldAction() {
+        iataTextField.clear();
+        identityTextField.clear();
+        nameTextField.clear();
+        typeTextField.clear();
+        elevationTextField.clear();
+        countryTextField.clear();
+        regionTextField.clear();
+        municipalityTextField.clear();
+        String local = localTextField.getText();
+        Airport a = AirportApplication.findAirportLocal(local);
+        if (a != null) {
+            if (a.getIataCode() != null) {
+                iataTextField.setText(a.getIataCode());
+            }
+            if (a.getAirportIdentity() != null) {
+                identityTextField.setText(a.getAirportIdentity());
+            }
+            if (a.getAirportName() != null) {
+                nameTextField.setText(a.getAirportName());
+            }
+            if (a.getAirportType() != null) {
+                typeTextField.setText(a.getAirportType());
+            }
+            if (a.getElevationInFeet() != null) {
+                elevationTextField.setText(Integer.toString(a.getElevationInFeet()));
+            }
+            if (a.getIsoCountry() != null) {
+                countryTextField.setText(a.getIsoCountry());
+            }
+            if (a.getIsoRegion() != null) {
+                regionTextField.setText(a.getIsoRegion());
+            }
+            if (a.getMunicipality() != null) {
+                municipalityTextField.setText(a.getMunicipality());
+            }
+        } else {
+            iataTextField.clear();
+            identityTextField.clear();
+            nameTextField.clear();
+            typeTextField.clear();
+            elevationTextField.clear();
+            countryTextField.clear();
+            regionTextField.clear();
+            municipalityTextField.clear();
+        }
+    }
+
+
+    @FXML
     private VBox airportInfo;
 
     @FXML
@@ -27,9 +185,6 @@ public class AirportController implements Initializable {
 
     @FXML
     private TextField typeTextField;
-
-    @FXML
-    private TextField cityTextField;
 
     @FXML
     private TextField elevationTextField;
@@ -42,6 +197,9 @@ public class AirportController implements Initializable {
 
     @FXML
     private TextField municipalityTextField;
+
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
