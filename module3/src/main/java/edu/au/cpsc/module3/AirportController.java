@@ -2,6 +2,7 @@ package edu.au.cpsc.module3;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Background;
@@ -16,6 +17,15 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AirportController implements Initializable {
+
+    @FXML
+    private WebView webViewPane;
+
+    @FXML
+    protected void urlAction(Airport a) {
+        String url = "https://www.windy.com/?" + (a.getLatitude()) + "," + (a.getLongitude()) + ",12";
+        webViewPane.getEngine().load(url);
+    }
 
     @FXML
     private HBox searchTools;
@@ -60,6 +70,7 @@ public class AirportController implements Initializable {
             if (a.getMunicipality() != null) {
                 municipalityTextField.setText(a.getMunicipality());
             }
+            urlAction(a);
         } else {
             iataTextField.clear();
             localTextField.clear();
@@ -112,6 +123,7 @@ public class AirportController implements Initializable {
             if (a.getMunicipality() != null) {
                 municipalityTextField.setText(a.getMunicipality());
             }
+            urlAction(a);
         } else {
             identityTextField.clear();
             localTextField.clear();
@@ -164,6 +176,7 @@ public class AirportController implements Initializable {
             if (a.getMunicipality() != null) {
                 municipalityTextField.setText(a.getMunicipality());
             }
+            urlAction(a);
         } else {
             iataTextField.clear();
             identityTextField.clear();
@@ -176,6 +189,21 @@ public class AirportController implements Initializable {
         }
     }
 
+    @FXML
+    private Button searchButton;
+
+    @FXML
+    protected void searchButtonAction() {
+        if (!identityTextField.getText().isEmpty()) {
+            identityTextFieldAction();
+        }
+        else if (!iataTextField.getText().isEmpty()) {
+            iataTextFieldAction();
+        }
+        else if (!localTextField.getText().isEmpty()) {
+            localTextFieldAction();
+        }
+    }
 
     @FXML
     private VBox airportInfo;
