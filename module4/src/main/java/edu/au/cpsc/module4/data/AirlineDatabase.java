@@ -3,10 +3,11 @@ package edu.au.cpsc.module4.data;
 
 import edu.au.cpsc.module4.model.ScheduledFlight;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AirlineDatabase {
+public class AirlineDatabase implements Serializable {
 
     // fields
     private List<ScheduledFlight> flights;

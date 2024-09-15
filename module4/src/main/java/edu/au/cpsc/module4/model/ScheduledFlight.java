@@ -1,9 +1,10 @@
 package edu.au.cpsc.module4.model;
 
+import java.io.Serializable;
 import java.time.LocalTime;
 import java.util.HashSet;
 
-public class ScheduledFlight {
+public class ScheduledFlight implements Serializable {
 
     // fields
     private String flightDesignator;
