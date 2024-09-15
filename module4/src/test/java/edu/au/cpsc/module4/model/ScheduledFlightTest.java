@@ -1,4 +1,4 @@
-package edu.au.cpsc.module4;
+package edu.au.cpsc.module4.model;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package edu.au.cpsc.module4;
+package edu.au.cpsc.module4.model;
 
 import java.time.LocalTime;
 import java.util.HashSet;
@@ -13,9 +13,7 @@ public class ScheduledFlight {
     private java.time.LocalTime arrivalTime;
     private HashSet<String> daysOfWeek;
 
-    // constructor
-
-
+    // constructors
     public ScheduledFlight(String flightDesignator, String departureAirportIdent, LocalTime departureTime, String arrivalAirportIdent, LocalTime arrivalTime, HashSet<String> daysOfWeek) {
         this.flightDesignator = flightDesignator;
         this.departureAirportIdent = departureAirportIdent;
@@ -26,6 +24,10 @@ public class ScheduledFlight {
     }
 
     public ScheduledFlight() {}
+
+    // methods
+
+        // getters and setters
 
     public String getFlightDesignator() {
         return flightDesignator;
