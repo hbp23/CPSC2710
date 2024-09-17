@@ -9,14 +9,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.au.cpsc.module4.controller.FlightScheduleController">
-    <center>
-        <fx:include fx:id="scheduledFlightTableView" source="../view/flightSchedule-table-view.fxml" />
-    </center>
+
+<BorderPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.au.cpsc.module4.controller.FlightScheduleController">
     <bottom>
         <HBox maxWidth="1.7976931348623157E308" spacing="35.0" BorderPane.alignment="CENTER">
-            <fx:include fx:id="scheduleFlightDetailView" source="../view/flightSchedule-detail-view.fxml" HBox.hgrow="ALWAYS" />
-            <fx:include fx:id="scheduleFlightDetailButtonView" source="../view/flightSchedule-detailButtons-view.fxml" />
+         <fx:include fx:id="flightScheduleDetailView" source="view/flightSchedule-detail-view.fxml" />
             <VBox prefHeight="126.0" prefWidth="72.0" spacing="10.0">
                 <children>
                     <Button fx:id="updateButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#updateButtonAction" text="Update" />
@@ -50,4 +47,7 @@
         </menus>
       </MenuBar>
    </top>
+   <center>
+      <fx:include fx:id="flightScheduleTableView" source="view/flightSchedule-table-view.fxml" />
+   </center>
 </BorderPane>
