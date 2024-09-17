@@ -2,7 +2,10 @@ package edu.au.cpsc.module4.model;
 
 import java.io.Serializable;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 
 public class ScheduledFlight implements Serializable {
 
@@ -28,7 +31,31 @@ public class ScheduledFlight implements Serializable {
 
     // methods
 
-        // getters and setters
+    public String getDaysOfWeekFormatted() {
+        StringBuilder sb = new StringBuilder();
+        if (daysOfWeek.contains("Monday") || daysOfWeek.contains("MONDAY") || daysOfWeek.contains("monday") || daysOfWeek.contains("M") || daysOfWeek.contains("m")) { sb.append("M");}
+        if (daysOfWeek.contains("Tuesday") || daysOfWeek.contains("TUESDAY") || daysOfWeek.contains("tuesday") || daysOfWeek.contains("T") || daysOfWeek.contains("t")) { sb.append("T");}
+        if (daysOfWeek.contains("Wednesday") || daysOfWeek.contains("WEDNESDAY") || daysOfWeek.contains("wednesday") || daysOfWeek.contains("W") || daysOfWeek.contains("w")) { sb.append("W");}
+        if (daysOfWeek.contains("Thursday") || daysOfWeek.contains("THURSDAY") || daysOfWeek.contains("thursday") || daysOfWeek.contains("R") || daysOfWeek.contains("r")) { sb.append("R");}
+        if (daysOfWeek.contains("Friday") || daysOfWeek.contains("FRIDAY") || daysOfWeek.contains("friday") || daysOfWeek.contains("F") || daysOfWeek.contains("f")) { sb.append("F");}
+        if (daysOfWeek.contains("Saturday") || daysOfWeek.contains("SATURDAY") || daysOfWeek.contains("saturday") || daysOfWeek.contains("S") || daysOfWeek.contains("s")) { sb.append("S");}
+        if (daysOfWeek.contains("Sunday") || daysOfWeek.contains("SUNDAY") || daysOfWeek.contains("sunday") || daysOfWeek.contains("U") || daysOfWeek.contains("u")) { sb.append("U");}
+        return sb.toString();
+    }
+
+    @Override
+    public String toString() {
+        return "ScheduledFlight{" +
+                "flightDesignator='" + flightDesignator + '\'' +
+                ", departureAirportIdent='" + departureAirportIdent + '\'' +
+                ", departureTime=" + departureTime +
+                ", arrivalAirportIdent='" + arrivalAirportIdent + '\'' +
+                ", arrivalTime=" + arrivalTime +
+                ", daysOfWeek=" + daysOfWeek +
+                '}';
+    }
+
+    // getters and setters
 
     public String getFlightDesignator() {
         return flightDesignator;
