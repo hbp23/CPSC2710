@@ -1,20 +1,11 @@
-@font-face {
-    font-family: "FONT1";
-    src: url(../font/Montserrat_VariableFont_wght.ttf);
-}
 
 @font-face {
-    font-family: "Monserrat-Italic1";
-    src: url(../font/Montserrat-Italic-VariableFont_wght.ttf);
-}
-
-@font-face {
-    font-family: "TEST";
+    font-family: "Pacifico";
     src: url(../font/Pacifico_Regular.ttf);
 }
 
 #airports-btn, #seat-reservation-btn, #flight-schedule-btn, #aircraft-btn {
-    -fx-font-family: "TEST";
+    -fx-font-family: "Pacifico";
     -fx-font-size: 12pt;
 }
 
