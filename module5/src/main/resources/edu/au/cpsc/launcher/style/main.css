@@ -1,0 +1,65 @@
+@import "font.css";
+
+#airports-btn {
+    -fx-graphic: url(../img/airport.png);
+    -fx-content-display: top;
+    -fx-background-color: transparent;
+}
+
+#airports-btn:hover {
+    -fx-background-color: white;
+}
+
+#airports-btn:pressed {
+    -fx-border-color: rgba(135, 206, 250);
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(135, 206, 250), 10, 0, 0, 0);
+}
+
+#aircraft-btn {
+    -fx-graphic: url(../img/airplane.png);
+    -fx-content-display: top;
+    -fx-background-color: transparent;
+}
+
+#aircraft-btn:hover {
+    -fx-background-color: white;
+}
+
+#aircraft-btn:pressed {
+    -fx-border-color: rgba(135, 206, 250);
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(135, 206, 250), 10, 0, 0, 0);
+}
+
+#seat-reservation-btn {
+    -fx-graphic: url(../img/seat.png);
+    -fx-content-display: top;
+    -fx-background-color: transparent;
+}
+
+#seat-reservation-btn:hover {
+    -fx-background-color: white;
+}
+
+#seat-reservation-btn:pressed {
+    -fx-border-color: rgba(135, 206, 250);
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(135, 206, 250), 10, 0, 0, 0);
+}
+
+#flight-schedule-btn {
+    -fx-graphic: url(../img/calendar.png);
+    -fx-content-display: top;
+    -fx-background-color: transparent;
+}
+
+#flight-schedule-btn:hover {
+    -fx-background-color: white;
+}
+
+#flight-schedule-btn:pressed {
+    -fx-border-color: rgba(135, 206, 250);
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(135, 206, 250), 10, 0, 0, 0);
+}
