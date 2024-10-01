@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox fx:id="flightScheduleDetailView" spacing="40.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.au.cpsc.module6.controller.FlightScheduleDetailViewController">
+   <children>
+      <GridPane fx:id="formGrid" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" HBox.hgrow="ALWAYS">
+          <columnConstraints>
+              <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="NEVER" maxWidth="159.0" minWidth="10.0" prefWidth="147.0" />
+              <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="257.0" minWidth="10.0" prefWidth="158.0" />
+          </columnConstraints>
+          <rowConstraints>
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+          <children>
+              <Label text="Flight Designator:" />
+              <Label text="Departure Airport Identity:" GridPane.rowIndex="1" />
+              <Label text="Departure Time(24h):" GridPane.rowIndex="2" />
+              <Label text="Arrival Airport Identity:" GridPane.rowIndex="3" />
+              <Label text="Arrival Time(24h):" GridPane.rowIndex="4" />
+              <TextField fx:id="flightDesignatorTextField" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" />
+              <TextField fx:id="departureAirportIdentityTextField" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+              <TextField fx:id="departureTimeTextField" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+              <TextField fx:id="arrivalAirportIdentityTextField" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+              <TextField fx:id="arrivalTimeTextField" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+          </children>
+      </GridPane>
+       <VBox fx:id="detailButtons" prefHeight="145.0" prefWidth="113.0" spacing="2.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+           <children>
+               <Label fx:id="buttonLabel" prefHeight="17.0" prefWidth="86.0" text="Days of Week" textAlignment="CENTER" underline="true" />
+               <HBox prefHeight="100.0" prefWidth="200.0">
+                   <children>
+                       <VBox spacing="3.0">
+                           <children>
+                               <ToggleButton fx:id="mondayButton" mnemonicParsing="false" prefWidth="47.0" text="Mon" />
+                               <ToggleButton fx:id="TuesdayButton" mnemonicParsing="false" prefWidth="47.0" text="Tue" />
+                               <ToggleButton fx:id="wednesdayButton" mnemonicParsing="false" prefWidth="47.0" text="Wed" />
+                               <ToggleButton fx:id="thursdayButton" mnemonicParsing="false" prefWidth="47.0" text="Thu" />
+                           </children>
+                       </VBox>
+                       <VBox prefHeight="104.0" prefWidth="60.0" spacing="3.0">
+                           <children>
+                               <ToggleButton fx:id="fridayButton" mnemonicParsing="false" prefWidth="43.0" text="Fri" />
+                               <ToggleButton fx:id="saturdayButton" mnemonicParsing="false" prefWidth="43.0" text="Sat" />
+                               <ToggleButton fx:id="sundayButton" mnemonicParsing="false" prefWidth="43.0" text="Sun" />
+                           </children>
+                           <HBox.margin>
+                               <Insets />
+                           </HBox.margin>
+                       </VBox>
+                   </children>
+               </HBox>
+           </children>
+       </VBox>
+   </children>
+</HBox>
